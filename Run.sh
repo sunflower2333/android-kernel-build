@@ -1,12 +1,14 @@
 #!/bin/bash
 # Download repo
-sudo apt update
-sudo apt install repo
 
 cd android-kernel
-repo init -u https://android.googlesource.com/kernel/manifest -b 226a9632f13d
+
+curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
+chmod +x repo
+
+./repo init -u https://android.googlesource.com/kernel/manifest -b 226a9632f13d
 mv a.xml .repo/manifests/default.xml
-repo sync
+./repo sync
 
 
 # Build
