@@ -8,7 +8,7 @@ curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
 chmod +x repo
 
 echo "Init repo"
-./repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10-2023-11 --depth=1
+./repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10-2023-11
 mv a.xml .repo/manifests/default.xml
 
 echo "sync data"
