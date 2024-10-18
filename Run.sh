@@ -17,6 +17,12 @@ echo "sync data"
 echo "overlay config"
 echo cp gki_config common/arch/arm64/configs/gki_defconfig
 
+echo "Apply Patches"
+cd common
+git apply ../patches/*.patch
+cd ..
+
+
 # Try build
 echo "Building...."
 mkdir -p ./gki202311-out/11136126
